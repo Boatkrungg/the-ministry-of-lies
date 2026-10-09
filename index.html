@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Ministry of Lies — luxury bureaucracy, zero actual authority." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#4a102d" />
+  <meta property="og:title" content="The Ministry of Lies" />
+  <meta property="og:description" content="Luxury bureaucracy, zero actual authority." />
+  <meta property="og:type" content="website" />
+  <title>The Ministry of Lies | Department of Delusions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    คู่มือไฟล์นี้ (HTML)
+    - ไฟล์นี้เก็บ "ข้อความและโครงสร้าง" ของเว็บ
+    - แก้ข้อความที่คนเห็นบนเว็บได้โดยแก้ข้อความระหว่าง > และ < เช่น >SAVE AS SVG<
+    - อย่าลบ id="..." ออก เพราะ script.js ใช้ id เพื่อหาปุ่มและพื้นที่แสดงผล
+    - ถ้าอยากแก้สีหรือขนาด ให้ไปแก้ style.css แทน
+  -->
+
+  <!-- ปุ่มข้ามไปยังเนื้อหา: ช่วยผู้ใช้คีย์บอร์ดข้ามส่วนหัวได้เร็วขึ้น -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- แถบคำเตือน: ควรเก็บไว้ เพื่อยืนยันว่าเว็บไซต์เป็นงานเสียดสี ไม่ใช่หน่วยงานจริง -->
+  <div class="disclaimer">SATIRE PROJECT • FOR ENTERTAINMENT ONLY • NOT A GOVERNMENT AGENCY • ZERO LEGAL POWER, MAXIMUM DRAMA</div>
+
+  <!-- ส่วนหัว: แก้ชื่อแบรนด์หรือข้อความสถานะได้ แต่ไม่ควรลบ class ของแต่ละส่วน -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go to home"><span class="brand-seal">ML</span><span>THE MINISTRY<br /><b>OF LIES</b></span></a>
+    <span class="edition">EST. 2026 · DELUXE DELUSION EDITION</span><span class="header-status">● office open-ish</span>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <!-- หน้าแรก: ปุ่ม id="startButton" จะพาผู้ใช้ไปเลือกหมวดคำร้อง -->
+    <section id="home" class="screen active hero">
+      <div class="hero-copy"><p class="kicker">THE DEPARTMENT OF EMOTIONAL PAPERWORK</p><h1>COMPLAINTS,<br /><i>BUT MAKE IT</i><br /><span>LUXURY.</span></h1><p class="tagline">Every problem has a solution—provided you submit the wrong form seven times, cry a little, and look fabulous doing it.</p><button class="primary-btn bounce" id="startButton">FILE A COMPLAINT, ICON <span>↗</span></button><p class="micro-copy">Your data is not saved. Your embarrassment, however, is between you and the universe.</p></div>
+      <div class="hero-card" aria-hidden="true"><div class="card-top"><span>MINISTRY CERTIFIED</span><span>NO. 00-CRY</span></div><div class="card-center"><p>OFFICIAL-ISH</p><b>EMOTIONAL<br />SUPPORT<br />DOCUMENT</b></div><div class="luxury-seal">APPROVED<br /><small>by vibes</small></div><div class="card-bottom">VALID UNTIL REALITY INTERVENES</div></div>
+    </section>
+
+    <!-- หน้าตัวเลือก: หากเพิ่มหมวดใหม่ data-type ต้องตรงกับชื่อใน documentTypes ของ script.js -->
+    <section id="types" class="screen section-wrap">
+      <div class="section-heading"><p class="kicker">STEP 01 / AVOIDING RESPONSIBILITY</p><h2>What are we<br /><i>dramatically addressing</i> today?</h2><p>Select a premium grievance. Our imaginary staff has put on their nicest fictional blazer.</p></div>
+      <div class="type-grid" id="typeGrid">
+        <button type="button" class="type-card" data-type="sleep"><span>01 · REST</span><b>Five more minutes of sleep</b><small>Negotiate with your alarm clock like it owes you rent.</small><em>ADD TO CART ↗</em></button>
+        <button type="button" class="type-card" data-type="money"><span>02 · FINANCE</span><b>Friend borrowed money, vanished</b><small>Last seen online, spiritually unavailable.</small><em>ADD TO CART ↗</em></button>
+        <button type="button" class="type-card" data-type="ignore"><span>03 · BOUNDARIES</span><b>Ignore messages on my day off</b><small>For the preservation of peace, skin, and battery.</small><em>ADD TO CART ↗</em></button>
+        <button type="button" class="type-card" data-type="adult"><span>04 · EXISTENCE</span><b>A break from being an adult</b><small>Return me to the trial version, please.</small><em>ADD TO CART ↗</em></button>
+        <button type="button" class="type-card" data-type="salary"><span>05 · MONEY</span><b>Salary disappeared instantly</b><small>It entered my account, waved, and got eaten by bills.</small><em>ADD TO CART ↗</em></button>
+        <button type="button" class="type-card special" data-type="other"><span>06 · CUSTOM</span><b>Something wildly specific</b><small>For disasters too niche for group chat.</small><em>MAKE IT COUTURE ↗</em></button>
+      </div><button class="text-btn back-home">← Return to the lobby</button>
+    </section>
+
+    <!-- หน้าฟอร์ม: required หมายถึงผู้ใช้ต้องกรอกช่องนั้นก่อนกดสร้างเอกสาร -->
+    <section id="form" class="screen section-wrap">
+      <div class="section-heading"><p class="kicker">STEP 02 / SPILL THE TEA</p><h2 id="formTitle">A very serious request</h2><p>Please be truthful. The system has no idea what it is doing, but it can sense a dramatic lie.</p></div>
+      <form id="requestForm" class="request-form">
+        <div class="form-label">APPLICANT DETAILS <span>required, unfortunately</span></div>
+        <label>Your name *<input id="requesterName" name="requesterName" autocomplete="name" maxlength="45" placeholder="e.g. A tired but fabulous citizen" required /></label>
+        <label>Who or what is the problem? *<input id="subjectName" name="subjectName" autocomplete="off" maxlength="60" placeholder="e.g. My alarm clock, capitalism, or Daniel" required /></label>
+        <label>Tell us the scandal<textarea id="details" name="details" maxlength="320" rows="5" placeholder="Give us the details. This is a safe space, unless your boss is reading."></textarea><span class="counter"><span id="count">0</span>/320 characters</span></label>
+        <fieldset><legend>Humour intensity</legend><div class="humor-options"><label><input type="radio" name="humor" value="mild" checked /><span>Soft launch</span></label><label><input type="radio" name="humor" value="cheeky" /><span>Spicy</span></label><label><input type="radio" name="humor" value="dark" /><span>Midnight deluxe</span></label></div></fieldset>
+        <p id="formError" class="form-error" role="alert"></p><div class="form-actions"><button type="button" class="secondary-btn" id="changeType">CHANGE CATEGORY</button><button type="submit" class="primary-btn">GENERATE MY RECEIPT <span>↗</span></button></div>
+      </form>
+    </section>
+
+    <!-- หน้าผลลัพธ์: ข้อความใน span/div ที่มี id จะถูก JavaScript เติมข้อมูลอัตโนมัติ -->
+    <section id="result" class="screen result-screen">
+      <div class="success-message" id="successMessage" aria-live="polite">Your complaint has been moisturized and sent upstairs.</div>
+      <article class="document" id="documentCard">
+        <div class="document-header"><div class="document-seal">ML<small>THE MINISTRY<br />OF LIES</small></div><div class="document-name"><p>THE DEPARTMENT OF EMOTIONAL PAPERWORK</p><h2>Certificate of Extremely Valid Feelings</h2><small>PREMIUM PETITION / FOR DISPLAY PURPOSES ONLY</small></div><div class="document-ref">RECEIPT NO.<b id="requestNo">ML-0000</b></div></div>
+        <div class="document-meta"><span>ISSUED: <b id="documentDate"></b></span><span>STATUS: <b class="status-badge" id="statusBadge">Awaiting glamour</b></span></div>
+        <div class="document-body"><p class="document-subject">RE: <strong id="resultSubject"></strong></p><p>To the Committee of People Who Probably Have Better Things To Do,</p><p>I, <strong id="resultName"></strong>, submit this highly curated concern regarding <strong id="resultTarget"></strong>.</p><div class="detail-box" id="resultDetails"></div><p id="bureaucraticText"></p><div class="signature-row"><div><span>Signed with emotional damage,</span><b id="signatureName"></b><small>Applicant / Main character</small></div><div class="stamp" id="stampText">SEEN<br />BY VIBES</div></div></div>
+        <div class="document-footer">A SATIRICAL DOCUMENT • NOT VALID FOR COURT, WORK, SCHOOL, OR GETTING OUT OF BRUNCH</div>
+      </article>
+      <div class="share-panel"><p>Congratulations. You survived the form. That alone deserves a little treat.</p><div class="result-actions"><button class="secondary-btn" id="downloadButton">SAVE AS SVG</button><button class="secondary-btn" id="printButton">PRINT / SAVE PDF</button><button class="secondary-btn" id="copyButton">COPY THE TEA</button><button class="primary-btn" id="newRequest">NEW COMPLAINT <span>↻</span></button></div></div>
+    </section>
+  </main>
+  <!-- ส่วนท้าย: เปลี่ยนข้อความได้อย่างปลอดภัย -->
+  <footer><span>THE MINISTRY OF LIES</span> · A STUDENT SATIRE PROJECT · NOT A GOVERNMENT AGENCY, BABE</footer>
+  <div id="toast" class="toast" role="status"></div><script src="script.js"></script>
+</body>
+</html>
